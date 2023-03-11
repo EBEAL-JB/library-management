@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Management System - Admin Panel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles */
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Header styles */
+
+header {
+	background-color: #333;
+	color: #fff;
+}
+
+header h1 {
+	margin: 0;
+	padding: 20px;
+	font-size: 2rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 10px;
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+
+nav a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+/* Main content styles */
+
+main {
+	padding: 40px 0;
+}
+
+
+/* Footer styles */
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+	padding: 10px;
+	font-size: 0.8rem;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px ;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			
+			<nav>
+				<ul>
+                    <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                      </div>
+                      
+                      <div id="main">
+                        <button class="openbtn" onclick="openNav()">☰</button>  
+                       
+                      </div>
+                      
+                      <script>
+                      function openNav() {
+                        document.getElementById("mySidebar").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                      }
+                      
+                      function closeNav() {
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft= "0";
+                      }
+                      </script>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Books</a></li>
+					<li><a href="#">Users</a></li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		
+	</main>
+	<footer>
+		<div class="container">
+			<p>Library Management System &copy; 2023</p>
+		</div>
+	</footer>
+</body>
+</html>
