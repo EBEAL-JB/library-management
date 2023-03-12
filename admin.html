@@ -53,11 +53,68 @@ nav a:hover {
 }
 
 /* Main content styles */
-
-main {
-	padding: 40px 0;
+.cards{
+  position: relative;
+  top: 5px;
+  bottom: 0px;
+  left: 220px;
+  right: 0px;
+  background: rgb(255, 255, 255);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  transition: margin-left .5s;
+  padding: 16px;
+ 
 }
-
+.cards .card{
+  width: 250px;
+  transform: translate(-100px,0px);
+  height: 100px;
+  margin: 0px 30px 0px 30px;
+  display: flex;
+  background: #080707;
+  justify-content: center;
+  box-shadow: 4px  4px  4px rgb(4, 4, 4),-4px -4px -4px rgb(240, 240, 240);
+  align-items: center;
+}
+span{
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+.title{
+  margin-left: 7px;
+  color: rgb(100, 100, 100);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+.card1 span{
+  color: yellowgreen;
+  border: none;
+  background: rgb(36, 36, 157);
+  opacity: 0.7;
+}
+.card2 span{
+  color: yellowgreen;
+  border: none;
+  background: rgb(116, 116, 226);
+}
+.card3 span{
+  color: yellowgreen;
+  border: none;
+  background: rgb(155, 36, 157);
+}
+.card4 span{
+  color: yellowgreen;
+  border: none;
+  background: rgb(157, 36, 76);
+}
 
 /* Footer styles */
 
@@ -131,6 +188,7 @@ footer p {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
     </style>
 </head>
 <body>
@@ -141,9 +199,10 @@ footer p {
 				<ul>
                     <div id="mySidebar" class="sidebar">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
+                        <a href="admin.html">Dashboard</a>
+                        <a href="page1.html">Manage User</a>
+                        <a href="#">Issue/Return</a>
+                        <a href="#">Manage Books</a>
                         <a href="#">Contact</a>
                       </div>
                       
@@ -172,8 +231,23 @@ footer p {
 			</nav>
 		</div>
 	</header>
-	<main>
-		
+	<main id="main">
+		<div class="cards">
+      <div class="card card1">
+        <span>5</span>
+        <div class="title">Users</div>
+      </div>
+      <div class="card card2">
+        <span>10</span>
+        <div class="title">Books</div>
+      </div> <div class="card card3">
+        <span>15</span>
+        <div class="title">Issued Books</div>
+      </div> <div class="card card4">
+        <span>20</span>
+        <div class="title">Total recieved</div>
+      </div>
+    </div>
 	</main>
 	<footer>
 		<div class="container">
