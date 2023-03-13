@@ -2,6 +2,7 @@ body
 {
     background: url('pic4.jpg')no-repeat;
     background-size: cover;
+
     
  
 
@@ -162,6 +163,6 @@ body
         transition:height .2s ease;
         margin-left: 10%;
         margin-top: -250px;
-    
+    }
     
 }
