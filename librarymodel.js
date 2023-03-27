@@ -1,0 +1,44 @@
+var mongoose=require("mongoose");
+var librarySchema= mongoose.Schema({
+     Username:{
+        type:String
+    },
+    password:{
+        type:String
+    },
+   Admin_No:{
+    type:Number
+    },
+   Book_No:{
+    type:Number
+    },
+   Status:{
+    type:String,
+    default:"Active"
+  },
+Email:{
+    type:String
+  },
+Date_of_return:{
+    type:Date
+},
+Date_of_issue:{
+    type:Date
+},
+Row_no:{
+    type:Number
+},
+Due_amount:{
+    type:Number
+},
+subject:{
+    type:String
+},
+},
+{
+timestamps:{
+    createdAt:"Create_date",
+    updateAt:"Update_date"
+}
+})
+module.exports=mongoose.model("libraryModel",librarySchema)
