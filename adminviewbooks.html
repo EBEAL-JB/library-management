@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issued Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #e92d2d;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #366956;
+}
+img{
+  height: 90px;
+  width: 90px;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+    </style>
+    <link rel="stylesheet" href="adminviewbooks.css">
+</head>
+
+<body>
+    
+   
+      <table class="tablestyle" border=" 2px solid #000" >
+        <thead>
+          <tr>
+          <th>BookID</th>
+          <th>Book</th>
+          <th>BookName</th>
+          <th>Book description</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="BookID">1234</td>
+          
+          <td data-label="Book"><img src="adminviewpageimage.jpg" alt=""></td>
+          <td data-label="bookName">Sql the complete reference</td>
+          <td data-label="Book description">N/A</td>
+          <td data-label="Category">Sql</td>
+          <td data-label="Price">150</td>
+          <td data-label="Qty">1 </a></td>
+          <td data-label="Action"><a href="#" class="tablebtn"> </a></td>
+        </tr>
+       
+
+
+      </tbody>
+      </table>
+  
+</body>
+</html>
