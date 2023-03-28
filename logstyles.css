@@ -17,32 +17,32 @@
     width: 100%;
     height: 100vh;
 
-    background-color:#28160298;
+    
 }
 .topichead{
     position:absolute;
     padding-top: 123px;
   margin-left: 458px;
-  color:rgb(195, 199, 199);
+  color:rgb(33, 19, 2);
   font-size:35px;
   
 }
 .topichead2{
     margin-left:150px;
-    color:rgba(206, 209, 208, 0.84);
+    color:rgb(49, 35, 5);
     text-decoration: rgb(55, 29, 3);
 }
 .log{
     width:200px;
     height:50px;
     background:transparent;
-    border: 2px solid #fff;
+    border: 2px solid rgb(33, 19, 2);
     outline: none;
     border-radius: 10px;
    
     cursor: pointer;
     font-size: 1.1em;
-    color: #fff;
+    color:rgb(49, 35, 5);
     font-weight: 500;
     margin-left: 550px;
     margin-top: 300px;
