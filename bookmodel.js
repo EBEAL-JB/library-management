@@ -1,0 +1,34 @@
+var mongoose=require("mongoose");
+var BookSchema= mongoose.Schema({
+     BookID:{
+        type:Number
+    },
+    Book_name:{
+        type:String
+    },
+   Author:{
+    type:String
+    },
+  Date_of_return:{
+    type:Date
+   },
+ Date_of_issue:{
+    type:Date
+ },
+Row_no:{
+    type:Number
+},
+payment:{
+    type:Number
+},
+subject:{
+    type:String
+},
+},
+{
+timestamps:{
+    createdAt:"Create_date",
+    updateAt:"Update_date"
+}
+})
+module.exports=mongoose.model("bookModel",BookSchema)
