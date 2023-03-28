@@ -81,6 +81,106 @@ h2{
 .buttoncontainer button:hover{
     background-image:linear-gradient(to right,#aa076b,#61045f) ;
 }
+
+/* Header styles */
+
+header {
+    position: absolute;
+    top: 0px;
+	background:linear-gradient(to right,#aa076b,#61045f);
+	color: #fff;
+    left: 0px;
+    width: 100%;
+}
+
+header h1 {
+	margin: 0;
+	padding: 20px;
+	font-size: 2rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 10px;
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+
+nav a:hover {
+
+
+        color: #b61a94;
+        background-color: #f6f4f4;
+}
+      
+/* sidebar*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background:linear-gradient(to right,#aa076b,#61045f);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  
+.sidebar a:hover {
+    color: #b61a94;
+    background-color: #f6f4f4;
+  
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background:linear-gradient(to right,#aa076b,#61045f);
+    color: white;
+    padding: 10px ;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .openbtn:hover {
+    background-color: #d854bbc1;
+  }
+ 
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
 @media(max-width:700px)
 {
     .container{

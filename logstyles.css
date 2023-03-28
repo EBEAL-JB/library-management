@@ -1,24 +1,36 @@
-body
+*{
+    padding: 0;
+    margin: 0;
+}
+.bg
 {
-    background: url('pic4.jpg')no-repeat;
+    width: 100%;
+    height: 100vh;
+    background:  url('lib2.jpg')no-repeat;
     background-size: cover;
-
+    background-position: center;
+    position: relative;
+    overflow: hidden;
     
- 
+}
+.bg-overlay{
+    width: 100%;
+    height: 100vh;
 
+    background-color:#28160298;
 }
 .topichead{
     position:absolute;
     padding-top: 123px;
   margin-left: 458px;
-  color:aliceblue;
+  color:rgb(195, 199, 199);
   font-size:35px;
   
 }
 .topichead2{
     margin-left:150px;
-    color:burlywood;
-    text-decoration: peru;
+    color:rgba(206, 209, 208, 0.84);
+    text-decoration: rgb(55, 29, 3);
 }
 .log{
     width:200px;

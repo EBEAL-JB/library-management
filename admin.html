@@ -20,7 +20,7 @@ body {
 /* Header styles */
 
 header {
-	background-color: #333;
+	background:linear-gradient(to right,#aa076b,#61045f);
 	color: #fff;
 }
 
@@ -48,8 +48,12 @@ nav a {
 }
 
 nav a:hover {
-	background-color: #fff;
-	color: #333;
+	
+
+  color: #b61a94;
+  background-color: #f6f4f4;
+
+
 }
 
 /* Main content styles */
@@ -137,7 +141,8 @@ footer p {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background:linear-gradient(to right,#aa076b,#61045f);
+  color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -147,13 +152,15 @@ footer p {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #b61a94;
+  background-color: #f6f4f4;
+
 }
 
 .sidebar .closebtn {
@@ -163,11 +170,13 @@ footer p {
   font-size: 36px;
   margin-left: 50px;
 }
-
+.closebtn :hover{
+  background-size: cover;
+}
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #333;
+  background:linear-gradient(to right,#aa076b,#61045f);
   color: white;
   padding: 10px ;
   border: none;
@@ -177,13 +186,75 @@ footer p {
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color: #d854bbc1;
 }
 
 #main {
   transition: margin-left .5s;
   padding: 16px;
 }
+/* table*/
+.open-profile{
+    cursor: pointer;
+
+}
+*{
+    
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+    
+    
+}
+
+.tablestyle {
+     width: 95%;
+     border-collapse: collapse;
+     margin-top: 7%;
+     margin-left: 3%;
+}
+.tablestyle thead{
+    background:linear-gradient(#aa076b,#61045f);
+
+}
+.tablestyle thead tr th{
+    font-size: 14px;
+    font-weight: medium;
+    letter-spacing: 0.35px;
+    color:#FFFFFF;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1 px solid#dee2e685;
+
+
+}
+.tablestyle tbody tr td  {
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: #000000;
+    background-color: #7e647e8b;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #61045f;
+}
+.tablestyle tbody tr td .tablebtn{
+    width:130px;
+    text-decoration: none;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #a248a2;
+    font-weight:medium;
+    color: #ededed;
+    text-align: center;
+   vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 14px;
+    opacity: 1;
+}
+
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
@@ -200,10 +271,12 @@ footer p {
                     <div id="mySidebar" class="sidebar">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                         <a href="admin.html">Dashboard</a>
-                        <a href="page3.html">Manage User</a>
-                        <a href="#">Issue/Return</a>
-                        <a href="#">Manage Books</a>
-                        <a href="#">Contact</a>
+                        <a href="adminviewbooks.html">MAnage book</a>
+                        <a href="adminissuepage.html">Issue Book</a>
+                        <a href="adminviewissued.html">View Issued Books</a>
+                        <a href="adminaddbookpage.html">Add Books</a>
+                        <a href="adminmanagefine.html">Manage Fines</a>
+                        <a href="adminmanageonlinedue.html">Dues paid</a>
                       </div>
                       
                       <div id="main">
@@ -248,7 +321,36 @@ footer p {
         <div class="title">Total recieved</div>
       </div>
     </div>
+    
+    <table class="tablestyle" border=" 2px solid #000" >
+      <thead>
+        <tr>
+        <th>BookID</th>
+        <th>Book</th>
+        <th>BookName</th>
+        <th>Book description</th>
+        <th>Category</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="BookID">1234</td>
+        
+        <td data-label="Book"><img src="adminviewpageimage.jpg" alt=""></td>
+        <td data-label="bookName">Sql the complete reference</td>
+        <td data-label="Book description">N/A</td>
+        <td data-label="Category">Sql</td>
+      
+      </tr>
+     
+
+
+    </tbody>
+    </table>
 	</main>
+
 	<footer>
 		<div class="container">
 			<p>Library Management System &copy; 2023</p>

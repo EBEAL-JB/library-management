@@ -93,9 +93,15 @@ h1{
 
 
 }
+/* Header styles */
+
 header {
-	background-color: #333;
+    position: absolute;
+    top: 0px;
+	background:linear-gradient(to right,#aa076b,#61045f);
 	color: #fff;
+    left: 0px;
+    width: 100%;
 }
 
 header h1 {
@@ -122,9 +128,13 @@ nav a {
 }
 
 nav a:hover {
-	background-color: #fff;
-	color: #333;
+
+
+        color: #b61a94;
+        background-color: #f6f4f4;
 }
+      
+/* sidebar*/
 .sidebar {
     height: 100%;
     width: 0;
@@ -132,7 +142,7 @@ nav a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background:linear-gradient(to right,#aa076b,#61045f);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -142,13 +152,16 @@ nav a:hover {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #fff;
     display: block;
     transition: 0.3s;
   }
   
-  .sidebar a:hover {
-    color: #f1f1f1;
+  
+.sidebar a:hover {
+    color: #b61a94;
+    background-color: #f6f4f4;
+  
   }
   
   .sidebar .closebtn {
@@ -162,7 +175,7 @@ nav a:hover {
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #333;
+    background:linear-gradient(to right,#aa076b,#61045f);
     color: white;
     padding: 10px ;
     border: none;
@@ -172,18 +185,10 @@ nav a:hover {
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: #d854bbc1;
   }
-  
-body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
-}
-
-  #main {
+ 
+#main {
     transition: margin-left .5s;
     padding: 16px;
   }
