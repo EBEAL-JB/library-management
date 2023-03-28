@@ -164,5 +164,17 @@ body
         margin-left: 10%;
         margin-top: -250px;
     }
+    .error-txt{
+        color: #dc3545;
+        text-align: left;
+        margin-top: 5px;
+      }
+      form .field .error{
+        display: none;
+      }
+      form .field.shake .error,
+      form .field.error .error{
+        display: block;
+      }
     
 }

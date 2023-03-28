@@ -22,28 +22,64 @@
     <div class="wrapper">
         <div class="formboxlog">
             <h2>LOGIN</h2>
-                    <form action="page1.html">
+                    <form onsubmit="return validate()" action="page1.html">
                         <div class="inputbox">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
 
                             </span>
                             
-                            <input type="email" for="mail" >
-                            <label for="mail" ><i style="font-size:14px" class="fa">&#xf0e0;</i>email</label>
-
-                        </div> <br>
+                            <input type="email" for="mail" id="text1" required >
+                            <label for="mail" ><i style="font-size:14px" class="fa">&#xf0e0;</i>email</label><br><br><br>
+                            <label id="lbltext" style="color: red; visibility: hidden;">Invalid email</label>
+                            
+                        </div> 
+                        
+                
+                        <br>
                         <div class="inputbox">
-                            <input type="password" for="pass">
+                            <input type="password" for="pass" id="pass" required>
                             <label for="pass"><i style="font-size:14px"  class="fa fa-lock"></i>password</label>
-
+                            <label id="lbltext1" style="color: red; visibility: hidden;">Invalid password</label>
                         </div>
+                       
                         
                         <br>
-                         <button type="submit" class="btn" > login</button>
+                         <button onclick="validate()" type="submit" class="btn" > login</button>
                         
                     </form>
-                    <script src="script.js"></script>
+                    <script src="script.js">
+                        
+                    </script>
+                    <script>
+                        function validate(){
+    var text=document.getElementById("text1").value;
+    var ppass=document.getElementById("pass").value;
+    var regx=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+    if(regx.test(text) ){
+        document.getElementById("lbltext").innerHTML="";
+        document.getElementById("lbltext").style.visibility="visible";
+        document.getElementById("lbltext").style.color="green";
+        return true;
+    }
+    else{
+        document.getElementById("lbltext").innerHTML="<br><br><br><br><br><br><br>invalid email";
+        document.getElementById("lbltext").style.visibility="visible";
+        document.getElementById("lbltext").style.color="red";
+        return false;
+    }
+    if(ppass.value=""){
+        document.getElementById("lbltext1").innerHTML="<br><br><br><br><br><br><br>invalid password";
+        document.getElementById("lbltext1").style.visibility="visible";
+        document.getElementById("lbltext1").style.color="red";
+        return false
+    }
+    else{
+        return true;
+    }
+}
+
+                    </script>
         </div>
     </div>
     
