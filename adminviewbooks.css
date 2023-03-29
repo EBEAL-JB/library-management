@@ -19,7 +19,7 @@
      margin-left: 3%;
 }
 .tablestyle thead{
-    background:linear-gradient(#aa076b,#61045f);
+  background: var(--blue);
 
 }
 .tablestyle thead tr th{
@@ -42,14 +42,14 @@
     background-color: #7e647e8b;
     padding: 8px;
     text-align: center;
-    border: 1px solid #61045f;
+    border: 1px solid #0b085a;
 }
 .tablestyle tbody tr td .tablebtn{
     width:130px;
     text-decoration: none;
     line-height: 35px;
     display: inline-block;
-    background-color: #a248a2;
+    background: var(--blue);
     font-weight:medium;
     color: #ededed;
     text-align: center;
