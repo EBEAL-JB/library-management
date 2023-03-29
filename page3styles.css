@@ -13,13 +13,14 @@
 }
 
 .tablestyle {
-     width: 100%;
-     border-collapse: collapse
-     ;
-     margin-top: 7%;
+    position: relative;
+    left: 3%;
+     width: 95%;
+     border-collapse: collapse;
+     margin-top: 3%;
 }
 .tablestyle thead{
-    background-color: #710000cb;
+    background: var(--blue);
 
 }
 .tablestyle thead tr th{
@@ -59,6 +60,22 @@
     font-size: 14px;
     opacity: 1;
 }
+.tablestyle tbody tr td .tablebtn1{
+  width:130px;
+  text-decoration: none;
+  line-height: 35px;
+  display: inline-block;
+  background-color: #18823d;
+  font-weight:medium;
+  color: #FFFFFF;
+  text-align: center;
+ vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 14px;
+  opacity: 1;
+}
+
 /* nav */
 *{
   font-family: "ubuntu",sans-serif;
@@ -222,8 +239,10 @@ body{
         
     }
     .tablestyle, .tablestyle tbody ,.tablestyle tr,.tablestyle td {
+        position: relative;
+        left: 3%;
         display: block;
-        width: 100%;
+        width: 95%;
     }
     .tablestyle tr{
         margin-bottom: 15px;
