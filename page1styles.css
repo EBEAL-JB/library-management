@@ -30,8 +30,10 @@
  ::placeholder{
     color: bisque;
 }
-.searchbar button img{
-    width: 10px;
+.searchbar button ion-icon{
+    position: relative;
+    left: 10;
+    font-size: 1.5rem;
  
    
 
@@ -42,7 +44,7 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    
+    background: black;
     
 }
 .subjectwrapper{
