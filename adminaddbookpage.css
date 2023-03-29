@@ -101,7 +101,7 @@ h2{
     background: var(--gray);
     color:var(--blue) ;
 }
-
+/* nav */
 *{
     font-family: "ubuntu",sans-serif;
     margin: 0;
@@ -288,10 +288,10 @@ body{
 /* responsive */
 @media (max-width:991px){
     .navigation{
-        left: -300px;
+        left: -250px;
     }
     .navigation.active{
-        width: 300px;
+        width: 250px;
         left: 0;
     }
     .main{
@@ -299,10 +299,8 @@ body{
         left: 0;
     }
     .main.active{
-        left: 300px;
+        left: 250px;
     }
-    .cardbox{
-        grid-template-columns: repeat(2,1fr);
-    }
+    
 
 }

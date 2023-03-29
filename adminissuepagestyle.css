@@ -6,18 +6,21 @@
 }
 body{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     height: 100vh;
 }
-.container{
+/* .container{
     max-width: 650px;
     padding: 28px;
     margin: 0 28px;
     box-shadow: 0 15px 20px #ABB2B9;
 
-}
-h2{
+} */
+h2{ 
+    position: absolute;
+    top: 50px;
+    left: 260px;
     font-size: 26px;
     font-weight: 600;
     text-align: left;
@@ -27,10 +30,18 @@ h2{
 
 }
 .content{
+    position: absolute;
+    top: 100px;
+    left: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 0;
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #ABB2B9;
+
 }
 .inputbox
 {
@@ -75,129 +86,211 @@ h2{
     color: #fff;
     border: none;
     border-radius: 5px;
-    background-image:linear-gradient(to right,#aa076b,#61045f) ;
+    background: var(--blue);
 
 }
 .buttoncontainer button:hover{
-    background-image:linear-gradient(to right,#aa076b,#61045f) ;
+    background: var(--gray);
+    color:var(--blue) ;
 }
-
-/* Header styles */
-
-header {
-    position: absolute;
-    top: 0px;
-	background:linear-gradient(to right,#aa076b,#61045f);
-	color: #fff;
-    left: 0px;
-    width: 100%;
+/* nav */
+*{
+    font-family: "ubuntu",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-header h1 {
-	margin: 0;
-	padding: 20px;
-	font-size: 2rem;
+:root{
+    --blue:#2a2185;
+    --white:#fff;
+    --gray:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
 }
-
-nav ul {
-	margin: 0;
-	padding: 10px;
-	list-style: none;
-	display: flex;
-}
-
-nav li {
-	margin-right: 20px;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px;
-}
-
-nav a:hover {
-
-
-        color: #b61a94;
-        background-color: #f6f4f4;
-}
-      
-/* sidebar*/
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background:linear-gradient(to right,#aa076b,#61045f);
+body{
+    
     overflow-x: hidden;
+
+}
+.container{
+    position: relative;
+    width: 100%;
+
+}
+/* navigation */
+.navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
     transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  
-.sidebar a:hover {
-    color: #b61a94;
-    background-color: #f6f4f4;
-  
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background:linear-gradient(to right,#aa076b,#61045f);
-    color: white;
-    padding: 10px ;
-    border: none;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 65px;
+}
+.navigation ul{
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .openbtn:hover {
-    background-color: #d854bbc1;
-  }
- 
+    width: 100%;
+
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color: var(--white);
+    
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+    color: var(--blue);
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.5rem;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+/* main */
+.main{
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 65px;
+
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: var(--blue);
+}
+.toggle{
+    position: relative;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    
+}
+.search ion-icon{
+    position: absolute;
+    top: 20px;
+    right: 55px;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 #main {
     transition: margin-left .5s;
     padding: 16px;
   }
-@media(max-width:700px)
-{
-    .container{
-        min-width: 280px;
+  @media(max-width:700px)
+  {
+      body{
+          font-size: 14px;
+      }
+     
+      h2{
+          position: absolute;
+          left: 50px;
+         
+      }
+      .content{
+          max-height: 380px;
+          overflow: auto;
+          min-width: 280px;
+          margin: auto;
+          margin-top: auto;
+      }
+      .inputbox{
+          margin-bottom: 12px;
+          width: 100%;
+  
+      }
+      .inputbox:nth-child(2n){
+          justify-content: space-between;
+  
+      }
+      
+  
+  }
+  @media (max-width:991px){
+    .navigation{
+        left: -250px;
     }
-    .content{
-        max-height: 380px;
-        overflow: auto;
+    .navigation.active{
+        width: 250px;
+        left: 0;
     }
-    .inputbox{
-        margin-bottom: 12px;
+    .main{
         width: 100%;
-
+        left: 0;
     }
-    .inputbox:nth-child(2n){
-        justify-content: space-between;
-
+    .main.active{
+        left: 250px;
     }
     
 
