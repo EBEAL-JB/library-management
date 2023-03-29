@@ -8,44 +8,89 @@
     <link rel="stylesheet" href="adminaddbookpage.css">
 </head>
 <body>
-    <header class="">
-    <nav>
-        <ul>
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="admin.html">Dashboard</a>
-                <a href="adminviewbooks.html">MAnage book</a>
-                <a href="adminissuepage.html">Issue Book</a>
-                <a href="adminviewissued.html">View Issued Books</a>
-                <a href="adminaddbookpage.html">Add Books</a>
-                <a href="adminmanagefine.html">Manage Fines</a>
-                <a href="adminmanageonlinedue.html">Dues paid</a>
-              </div>
-              
-              <div id="main">
-                <button class="openbtn" onclick="openNav()">☰</button>  
-               
-              </div>
-              
-              <script>
-              function openNav() {
-                document.getElementById("mySidebar").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-              }
-              
-              function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-              }
-              </script>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Books</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </nav>
-    </header>
+   <!--Navigation-->
+   <div class="container">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="library-sharp"></ion-icon>
+            </span>
+            <span class="title">LMS</span>
+          </a>
+        </li>
+        <li>
+            <a href="admin.html">
+                <span class="icon">
+                  <ion-icon name="reader-outline"></ion-icon>
+                </span>
+                <span class="title">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminviewbooks.html">
+                <span class="icon">
+                  <ion-icon name="library-outline"></ion-icon>
+                </span>
+                <span class="title">Manage Book</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminissuepage.html">
+                <span class="icon">
+                  <ion-icon name="folder-open-outline"></ion-icon>
+                </span>
+                <span class="title">Issue Book</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminviewissued.html">
+                <span class="icon">
+                  <ion-icon name="layers-outline"></ion-icon>
+                </span>
+                <span class="title">View Issued Books</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminaddbookpage.html">
+                <span class="icon">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </span>
+                <span class="title">Add Books</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminmanagefine.html">
+                <span class="icon">
+                  <ion-icon name="cash-outline"></ion-icon>
+                </span>
+                <span class="title">Manage Fines</span>
+              </a>
+            </li>
+            <li>
+              <a href="adminmanageonlinedue.html">
+                <span class="icon">
+                  <ion-icon name="wallet-outline"></ion-icon>
+                </span>
+                <span class="title">Dues Paid</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+         <!--Main-->
+        <div class="main">
+          <div class="topbar">
+            <div class="toggle">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="search">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </div>
+            <div class="user">
+              <img src="img2.jpg" alt="">
+            </div>
+          </div>
     <div class="container">
         <form action="">
            
@@ -90,6 +135,30 @@
             </div>
         </form>
     </div>
+    <script>
+        //add hovered class to selected list item
+        let list=document.querySelectorAll(".navigation li");
     
+        function activeLink(){
+          list.forEach(item=>{
+            item.classList.remove("hovered");
+          });
+          this.classList.add("hovered")
+        }
+        list.forEach(item=>item.addEventListener("mouseover",activeLink))
+    
+        // menu Toggle
+        let toggle=document.querySelector(".toggle");
+        let navigation=document.querySelector(".navigation");
+        let main=document.querySelector(".main");
+    
+        toggle.onclick=function(){
+          navigation.classList.toggle("active");
+          main.classList.toggle("active");
+        };
+      </script>
+      <!--icon-->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

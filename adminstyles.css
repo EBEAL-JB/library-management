@@ -103,7 +103,7 @@ body{
     transition: 0.5s;
 }
 .main.active{
-    width: calc(100% - 250px);
+    width: calc(100% - 60px);
     left: 65px;
 
 }
@@ -193,4 +193,129 @@ body{
 .cardbox .card:hover .cardname,
 .cardbox .card:hover .iconbox{
     color: var(--white);
+}
+/* books */
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+ .details .recent{
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.details .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardheader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+.cardheader .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    border-radius: 6px;
+    color: var(--white);
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead{
+    font-weight: 600px;
+
+}
+.details .recent table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recent table tbody tr:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+.details .recent table tr:last-child{
+    border-bottom: none;
+}
+.details .recent table tbody tr:hover{
+    background: var(--blue);
+    color: var(--white);
+}
+.details .recent table tr td{
+    padding: 10px;
+}
+.details .recent table tr td:last-child{
+    text-align: end;
+}
+.details .recent table tr td:nth-child(2){
+    text-align: end;
+}
+.details .recent table tr td:nth-child(3){
+    text-align: center;
+}
+/* responsive */
+@media (max-width:991px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardbox{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media (max-width:768px){
+    .details{
+        grid-template-columns: 1fr;
+    }
+    .recent{
+        overflow-x: auto;
+    }
+    
+}
+@media (max-width:480px){
+    .cardbox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardheader h2{
+        font-size: 20px;
+    }
+    .user{
+        min-width: 40px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .toggle{
+        z-index: 10001;
+    }
+    .main.active .toggle{
+        color: #fff;
+        position: fixed;
+    }
 }
