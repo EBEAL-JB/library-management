@@ -1,360 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Library Management System - Admin Panel</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-    <style>
-        /* Global styles */
-
-body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
-}
-
-
-/* Header styles */
-
-header {
-	background:linear-gradient(to right,#aa076b,#61045f);
-	color: #fff;
-}
-
-header h1 {
-	margin: 0;
-	padding: 20px;
-	font-size: 2rem;
-}
-
-nav ul {
-	margin: 0;
-	padding: 10px;
-	list-style: none;
-	display: flex;
-}
-
-nav li {
-	margin-right: 20px;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px;
-}
-
-nav a:hover {
-	
-
-  color: #b61a94;
-  background-color: #f6f4f4;
-
-
-}
-
-/* Main content styles */
-.cards{
-  position: relative;
-  top: 5px;
-  bottom: 0px;
-  left: 220px;
-  right: 0px;
-  background: rgb(255, 255, 255);
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  transition: margin-left .5s;
-  padding: 16px;
- 
-}
-.cards .card{
-  width: 250px;
-  transform: translate(-100px,0px);
-  height: 100px;
-  margin: 0px 30px 0px 30px;
-  display: flex;
-  background: linear-gradient(45deg,#47cebe,#ef4a82);
-  justify-content: center;
-  box-shadow: 4px  4px  4px rgb(4, 4, 4),-4px -4px -4px rgb(240, 240, 240);
-  align-items: center;
-}
-span{
-  border: 1px solid black;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 30px;
-}
-.title{
-  margin-left: 7px;
-  color: rgb(100, 100, 100);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
-}
-.card1 span{
-  color: yellowgreen;
-  border: none;
-  background: rgb(36, 36, 157);
-  opacity: 0.7;
-}
-.card2 span{
-  color: yellowgreen;
-  border: none;
-  background: rgb(116, 116, 226);
-}
-.card3 span{
-  color: yellowgreen;
-  border: none;
-  background: rgb(155, 36, 157);
-}
-.card4 span{
-  color: yellowgreen;
-  border: none;
-  background: rgb(157, 36, 76);
-}
-
-/* Footer styles */
-
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 10px 0;
-	text-align: center;
-}
-
-footer p {
-	margin: 0;
-	padding: 10px;
-	font-size: 0.8rem;
-}
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background:linear-gradient(to right,#aa076b,#61045f);
-  color: #fff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #fff;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #b61a94;
-  background-color: #f6f4f4;
-
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-.closebtn :hover{
-  background-size: cover;
-}
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background:linear-gradient(to right,#aa076b,#61045f);
-  color: white;
-  padding: 10px ;
-  border: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.openbtn:hover {
-  background-color: #d854bbc1;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-/* table*/
-.open-profile{
-    cursor: pointer;
-
-}
-*{
-    
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-    
-    
-}
-
-.tablestyle {
-     width: 95%;
-     border-collapse: collapse;
-     margin-top: 7%;
-     margin-left: 3%;
-}
-.tablestyle thead{
-    background:linear-gradient(#aa076b,#61045f);
-
-}
-.tablestyle thead tr th{
-    font-size: 14px;
-    font-weight: medium;
-    letter-spacing: 0.35px;
-    color:#FFFFFF;
-    opacity: 1;
-    padding: 12px;
-    vertical-align: top;
-    border: 1 px solid#dee2e685;
-
-
-}
-.tablestyle tbody tr td  {
-    font-size: 14px;
-    letter-spacing: 0.35px;
-    font-weight: normal;
-    color: #000000;
-    background-color: #7e647e8b;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #61045f;
-}
-.tablestyle tbody tr td .tablebtn{
-    width:130px;
-    text-decoration: none;
-    line-height: 35px;
-    display: inline-block;
-    background-color: #a248a2;
-    font-weight:medium;
-    color: #ededed;
-    text-align: center;
-   vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    font-size: 14px;
-    opacity: 1;
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminstyles.css">
 </head>
 <body>
-	<header>
-		<div class="container">
-			
-			<nav>
-				<ul>
-                    <div id="mySidebar" class="sidebar">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="admin.html">Dashboard</a>
-                        <a href="adminviewbooks.html">MAnage book</a>
-                        <a href="adminissuepage.html">Issue Book</a>
-                        <a href="adminviewissued.html">View Issued Books</a>
-                        <a href="adminaddbookpage.html">Add Books</a>
-                        <a href="adminmanagefine.html">Manage Fines</a>
-                        <a href="adminmanageonlinedue.html">Dues paid</a>
-                      </div>
-                      
-                      <div id="main">
-                        <button class="openbtn" onclick="openNav()">☰</button>  
-                       
-                      </div>
-                      
-                      <script>
-                      function openNav() {
-                        document.getElementById("mySidebar").style.width = "250px";
-                        document.getElementById("main").style.marginLeft = "250px";
-                      }
-                      
-                      function closeNav() {
-                        document.getElementById("mySidebar").style.width = "0";
-                        document.getElementById("main").style.marginLeft= "0";
-                      }
-                      </script>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Books</a></li>
-					<li><a href="#">Users</a></li>
-					<li><a href="#">Reports</a></li>
-					<li><a href="#">Logout</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<main id="main">
-		<div class="cards">
-      <div class="card card1">
-        <span>5</span>
-        <div class="title">Users</div>
+  <!--Navigation-->
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="library-sharp"></ion-icon>
+            </span>
+            <span class="title">LMS</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="reader-outline"></ion-icon>
+            </span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="library-outline"></ion-icon>
+            </span>
+            <span class="title">Manage Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="folder-open-outline"></ion-icon>
+            </span>
+            <span class="title">Issue Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="layers-outline"></ion-icon>
+            </span>
+            <span class="title">View Issued Books</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="duplicate-outline"></ion-icon>
+            </span>
+            <span class="title">Add Books</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="cash-outline"></ion-icon>
+            </span>
+            <span class="title">Manage Fines</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="icon">
+              <ion-icon name="wallet-outline"></ion-icon>
+            </span>
+            <span class="title">Dues Paid</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+     <!--Main-->
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+        <div class="user">
+          <img src="lib1.jpg" alt="">
+        </div>
       </div>
-      <div class="card card2">
-        <span>10</span>
-        <div class="title">Books</div>
-      </div> <div class="card card3">
-        <span>15</span>
-        <div class="title">Issued Books</div>
-      </div> <div class="card card4">
-        <span>20</span>
-        <div class="title">Total recieved</div>
+      <!--Cards-->
+      <div class="cardbox">
+        <div class="card">
+          <div>
+            <div class="numbers">1,504</div>
+            <div class="cardname">Users</div>
+          </div>
+          <div class="iconbox">
+            <ion-icon name="people-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">1,504</div>
+            <div class="cardname">Books</div>
+          </div>
+          <div class="iconbox">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">1,504</div>
+            <div class="cardname">Issued Books</div>
+          </div>
+          <div class="iconbox">
+            <ion-icon name="library-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">1,504</div>
+
+            <div class="cardname">Dues</div>
+          </div>
+          <div class="iconbox">
+            <ion-icon name="cash-outline"></ion-icon>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <table class="tablestyle" border=" 2px solid #000" >
-      <thead>
-        <tr>
-        <th>BookID</th>
-        <th>Book</th>
-        <th>BookName</th>
-        <th>Book description</th>
-        <th>Category</th>
-        
+  </div>  
+ 
+  <script>
+    //add hovered class to selected list item
+    let list=document.querySelectorAll(".navigation li");
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="BookID">1234</td>
-        
-        <td data-label="Book"><img src="adminviewpageimage.jpg" alt=""></td>
-        <td data-label="bookName">Sql the complete reference</td>
-        <td data-label="Book description">N/A</td>
-        <td data-label="Category">Sql</td>
-      
-      </tr>
-     
+    function activeLink(){
+      list.forEach(item=>{
+        item.classList.remove("hovered");
+      });
+      this.classList.add("hovered")
+    }
+    list.forEach(item=>item.addEventListener("mouseover",activeLink))
 
+    // menu Toggle
+    let toggle=document.querySelector(".toggle");
+    let navigation=document.querySelector(".navigation");
+    let main=document.querySelector(".main");
 
-    </tbody>
-    </table>
-	</main>
-
-	<footer>
-		<div class="container">
-			<p>Library Management System &copy; 2023</p>
-		</div>
-	</footer>
+    toggle.onclick=function(){
+      navigation.classList.toggle("active");
+      main.classList.toggle("active");
+    };
+  </script>
+  <!--icon-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
