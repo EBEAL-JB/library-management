@@ -6,7 +6,7 @@
 {
     width: 100%;
     height: 100vh;
-    background:  url('lib2.jpg')no-repeat;
+    background:  url('lib5.jpg')no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -48,8 +48,15 @@
     margin-top: 300px;
     
 }
+.abt{
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .log:hover{
-    background-color: #fff;
+    background-color: #eed497ea;
     color: black;
 }
 .wrapper{
