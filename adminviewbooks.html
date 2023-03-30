@@ -11,20 +11,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
-.active {
-  background-color: #366956;
-}
+
 img{
-  height: 90px;
+  height: 100px;
   width: 90px;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
+
 
 
     </style>
@@ -140,13 +133,80 @@ img{
           <td data-label="Category">Sql</td>
           <td data-label="Price">150</td>
           <td data-label="Qty">1 </a></td>
-          <td data-label="Action"><a href="#" class="tablebtn"> </a></td>
+          <td data-label="Action"><a href="#" class="tablebtn">
+            <ion-icon name="menu-outline"></ion-icon></a>  
+            <button class="tablebtn2" onclick="openForm()"><ion-icon name="create-outline"></ion-icon></button>         
+            <button class="tablebtn3" onclick="conf()"><ion-icon name="trash-outline"></ion-icon></button>
+        </td>
         </tr>
        
 
 
       </tbody>
       </table>
+      <!-- pop up form -->
+      <div class="container  form-popup" id="myForm">
+        <form action="">
+           
+            <h2> EDIT BOOKS</h2>
+            <div class="content">
+                <div class="inputbox">
+                    <label for="Bookno">BookNO</label>
+                    <input type="text" placeholder="eg:432156" name="Bookno" required >
+                </div>
+                <div class="inputbox">
+                    <label for="Booktitle">Booktitle</label>
+                    <input type="text" placeholder="booktitle" name="Booktitle" required >
+                </div>
+                <div class="inputbox">
+                    <label for="author">AuthorName</label>
+                    <input type="text" placeholder="name of author" name="userid" required >
+                </div>
+                <div class="inputbox">
+                    <label for="sub">Subject</label>
+                    <input type="text" placeholder="belonging subject" name="name" required >
+                </div>
+                <div class="inputbox">
+                    <label for="publish">Publisher</label>
+                    <input type="text" placeholder="Publisher name" name="name" required >
+                </div>
+                <div class="inputbox">
+                  <label for="publish">Description</label>
+                  <input type="text" placeholder="Publisher name" name="name" required >
+              </div>
+               
+                
+                <div class="inputbox">
+                    <label for="imgg">enter image of book</label>
+                    <input type="file" placeholder="name" name="name" required >
+                    
+                </div>
+
+                <div class="buttoncontainer">
+                    <button type="submit">
+                         EDIT
+                    </button>
+                </div>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+
+            </div>
+        </form>
+    </div>
+    
+      <script>
+        function conf() {
+          confirm("Are u sure about to delete this bok");
+        }
+        </script>
+        <script>
+            function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+        </script>
       <script>
         //add hovered class to selected list item
         let list=document.querySelectorAll(".navigation li");

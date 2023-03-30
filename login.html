@@ -24,7 +24,7 @@
     <div class="wrapper">
         <div class="formboxlog">
             <h2>LOGIN</h2>
-                    <form onsubmit="return validate()" action="admin.html">
+                    <form onsubmit="validate()">
                         <div class="inputbox">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
@@ -57,30 +57,33 @@
                         function validate(){
     var text=document.getElementById("text1").value;
     var ppass=document.getElementById("pass").value;
-    var regx=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-    if(regx.test(text) ){
-        document.getElementById("lbltext").innerHTML="";
-        document.getElementById("lbltext").style.visibility="visible";
-        document.getElementById("lbltext").style.color="green";
-        return true;
+    // var regx=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+    // if(regx.test(text) ){
+    //     document.getElementById("lbltext").innerHTML="";
+    //     document.getElementById("lbltext").style.visibility="visible";
+    //     document.getElementById("lbltext").style.color="green";
+    //     return true;
+    // }
+    // else{
+    //     document.getElementById("lbltext").innerHTML="<br><br><br><br><br><br><br>invalid email";
+    //     document.getElementById("lbltext").style.visibility="visible";
+    //     document.getElementById("lbltext").style.color="red";
+    //     return false;
+    // }
+    // if(ppass.value=""){
+    //     document.getElementById("lbltext1").innerHTML="<br><br><br><br><br><br><br>invalid password";
+    //     document.getElementById("lbltext1").style.visibility="visible";
+    //     document.getElementById("lbltext1").style.color="red";
+    //     return false
+    // }
+    // else{
+    //     return true;
+    // }
+    if(text.value="admin@123.com"){
+        window.location.assign("page1.html");
     }
     else{
-        document.getElementById("lbltext").innerHTML="<br><br><br><br><br><br><br>invalid email";
-        document.getElementById("lbltext").style.visibility="visible";
-        document.getElementById("lbltext").style.color="red";
-        return false;
-    }
-    if(ppass.value=""){
-        document.getElementById("lbltext1").innerHTML="<br><br><br><br><br><br><br>invalid password";
-        document.getElementById("lbltext1").style.visibility="visible";
-        document.getElementById("lbltext1").style.color="red";
-        return false
-    }
-    else{
-        return true;
-    }
-    if(text="admin@123.com"){
-        
+        window.location.replace("page1.html");
     }
 }
 
