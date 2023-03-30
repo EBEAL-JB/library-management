@@ -7,8 +7,8 @@
 
 .searchbar{
     position: relative;
-    left: 100px;
-    width: 70vh;
+    left: 25%;
+    width: 30rem;
    background-color: black;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
 }
 .searchbar button ion-icon{
     position: relative;
-    left: 10;
+    left: 10%;
     font-size: 1.5rem;
  
    
@@ -114,6 +114,26 @@ body{
     position: relative;
     width: 100%;
 
+}
+.btn{
+    color:#fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-top: 8px;
+    padding: 6px 15px;
+    background: #333;
+    border-radius:5px ;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn:hover{
+    letter-spacing: 1px;
+
+}
+.btn:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 /* navigation */
 .navigation{
@@ -248,7 +268,8 @@ body{
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
-  }
+   
+}
   @media (max-width:991px){
     .navigation{
         left: -250px;
@@ -264,8 +285,7 @@ body{
     .main.active{
         left: 250px;
     }
-    
-
+  
 }
 
 

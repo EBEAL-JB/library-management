@@ -17,6 +17,7 @@
      border-collapse: collapse;
      margin-top: 7%;
      margin-left: 3%;
+    
 }
 .tablestyle thead{
   background: var(--blue);
@@ -58,7 +59,9 @@
     font-size: 14px;
     opacity: 1;
 }
-
+.rec{
+  overflow-x: auto;
+}
 /* nav */
 *{
   font-family: "ubuntu",sans-serif;
@@ -260,7 +263,13 @@ body{
     .main.active{
         left: 250px;
     }
-    
+    .tablestyle-wrapper{
+      overflow-x: scroll;
+      overflow-y: scroll;
+    }
+    table-wrapper{
+      overflow-x: scroll;
+    }
 
 }
 
