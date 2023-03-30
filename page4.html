@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issued Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+
+    <link rel="stylesheet" href="page3styles.css">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+    </style>
+</head>
+
+
+<body>
+   <!--Navigation-->
+   <div class="container">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="library-sharp"></ion-icon>
+            </span>
+            <span class="title">LMS</span>
+          </a>
+        </li>
+              <li>
+              <a href="page1.html">
+                  <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </span>
+                  <span class="title">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="page3.html">
+                  <span class="icon">
+                    <ion-icon name="library-outline"></ion-icon>
+                  </span>
+                  <span class="title">Issued Books</span>
+                </a>
+              </li>
+              <li>
+                <a href="page4.html">
+                  <span class="icon">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                  </span>
+                  <span class="title">Due</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+         <!--Main-->
+        <div class="main">
+          <div class="topbar">
+            <div class="toggle">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="search">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </div>
+            <div class="user">
+              <img src="img2.jpg" alt="">
+            </div>
+          </div>
+   
+      <table class="tablestyle" border=" 2px solid #000" ">
+        <thead>
+          <tr>
+          <th>BookID</th>
+          <th>BookName</th>
+          <th>Issued Date</th>
+          <th>Return Date</th>
+          <th>Book due per day</th>
+          <th>Due amount</th>
+          <th>Due</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="BookID">1234</td>
+          <td data-label="BookName">Data Structure</td>
+   
+          <td data-label="Issued Date">09-03-2023</td>
+          <td data-label="Return Date">30-03-2023</td>
+          <td data-label="book Due/day">10</td>
+          <td data-label="Due Amount">30</a></td>
+          <td data-label="Due"><a href="#" class="tablebtn"> Pay Due</a></td>
+        </tr>
+        
+      </tbody>
+      </table>
+      <script>
+        //add hovered class to selected list item
+        let list=document.querySelectorAll(".navigation li");
+      
+        function activeLink(){
+          list.forEach(item=>{
+            item.classList.remove("hovered");
+          });
+          this.classList.add("hovered")
+        }
+        list.forEach(item=>item.addEventListener("mouseover",activeLink))
+      
+        // menu Toggle
+        let toggle=document.querySelector(".toggle");
+        let navigation=document.querySelector(".navigation");
+        let main=document.querySelector(".main");
+      
+        toggle.onclick=function(){
+          navigation.classList.toggle("active");
+          main.classList.toggle("active");
+        };
+      </script>
+      <!--icon-->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
