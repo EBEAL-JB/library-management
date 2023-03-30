@@ -45,7 +45,7 @@
     text-align: center;
     border: 1px solid #dee2e685;
 }
-.tablestyle tbody tr td .tablebtn{
+/* .tablestyle tbody tr td .tablebtn{
     width:130px;
     text-decoration: none;
     line-height: 35px;
@@ -59,7 +59,7 @@
     border: 1px solid transparent;
     font-size: 14px;
     opacity: 1;
-}
+} */
 .tablestyle tbody tr td .tablebtn1{
   width:130px;
   text-decoration: none;
