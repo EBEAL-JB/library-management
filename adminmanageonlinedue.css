@@ -3,6 +3,10 @@
     cursor: pointer;
 
 }
+.rec{
+  max-width: 800px;
+  overflow-x: scroll;
+}
 *{
     
    margin: 0;
@@ -264,7 +268,7 @@ body{
       overflow-x: scroll;
       overflow-y: scroll;
     }
-    
+
 
 }
 

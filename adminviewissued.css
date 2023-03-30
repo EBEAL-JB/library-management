@@ -45,11 +45,11 @@
     border: 1px solid #0e0441;
 }
 .tablestyle tbody tr td .tablebtn{
-    width:130px;
+    width:50px;
     text-decoration: none;
     line-height: 35px;
     display: inline-block;
-    background: var(--blue);
+    background: green;
     font-weight:medium;
     color: #ededed;
     text-align: center;

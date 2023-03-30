@@ -24,7 +24,7 @@
     <div class="wrapper">
         <div class="formboxlog">
             <h2>LOGIN</h2>
-                    <form onsubmit="validate()">
+                    <form onsubmit="validate()" action="admin.html">
                         <div class="inputbox">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
@@ -80,10 +80,10 @@
     //     return true;
     // }
     if(text.value="admin@123.com"){
-        window.location.assign("page1.html");
+        window.location.replace = ("admin.html");
     }
     else{
-        window.location.replace("page1.html");
+        window.location.href = ("page1.html");
     }
 }
 
