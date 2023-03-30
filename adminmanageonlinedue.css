@@ -260,6 +260,10 @@ body{
     .main.active{
         left: 250px;
     }
+    .tablestyle-wrapper{
+      overflow-x: scroll;
+      overflow-y: scroll;
+    }
     
 
 }
