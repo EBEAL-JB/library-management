@@ -2,96 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN PAGE</title>
+    <title>LoginPage</title>
     <link rel="stylesheet" href="logstyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <div class="bg">
-        <div class="bg-overlay">
-            <img src="about.png" alt="image" class="abt">
-        
-   <div class="topichead">
-    <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-        LIBRARY <div class="topichead2" style="font-family:sans-serif;">
-             for you
-        </div>
-    </h2>
-   </div>
-    <button class="log">LOGIN</button>
-    <div class="wrapper">
-        <div class="formboxlog">
-            <h2>LOGIN</h2>
-                    <form onsubmit="validate()" action="admin.html">
-                        <div class="inputbox">
-                            <span class="icon">
-                                <ion-icon name="mail"></ion-icon>
+<body class="back"> 
+    <div class="modal">
+      <div style="text-align: center;">
+        <h1 style="color: rgb(255, 255, 255);">Library For You</h1>
+      </div>
+    <form class="modal-content " id="myForm"  action="admin.html" action="/login" method="post">
+      
+      <div class="container">
+        <label for="email"><b>Email</b></label>
+        <input type="text" name="email" placeholder="Username" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>    
+      </form>
+      </div>
+     
+       
+      <!-- <script>
+        const fetch = require('node-fetch');
 
-                            </span>
-                            
-                            <input type="email" for="mail" id="text1" required >
-                            <label for="mail" ><i style="font-size:14px" class="fa">&#xf0e0;</i>email</label><br><br><br>
-                            <label id="lbltext" style="color: red; visibility: hidden;">Invalid email</label>
-                            
-                        </div> 
-                        
-                
-                        <br>
-                        <div class="inputbox">
-                            <input type="password" for="pass" id="pass" required>
-                            <label for="pass"><i style="font-size:14px"  class="fa fa-lock"></i>password</label>
-                            <label id="lbltext1" style="color: red; visibility: hidden;">Invalid password</label>
-                        </div>
-                       
-                        
-                        <br>
-                         <button onclick="validate()" type="submit" class="btn" > login</button>
-                        
-                    </form>
-                    <script src="script.js">
-                        
-                    </script>
-                    <script>
-                        function validate(){
-    var text=document.getElementById("text1").value;
-    var ppass=document.getElementById("pass").value;
-    // var regx=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-    // if(regx.test(text) ){
-    //     document.getElementById("lbltext").innerHTML="";
-    //     document.getElementById("lbltext").style.visibility="visible";
-    //     document.getElementById("lbltext").style.color="green";
-    //     return true;
-    // }
-    // else{
-    //     document.getElementById("lbltext").innerHTML="<br><br><br><br><br><br><br>invalid email";
-    //     document.getElementById("lbltext").style.visibility="visible";
-    //     document.getElementById("lbltext").style.color="red";
-    //     return false;
-    // }
-    // if(ppass.value=""){
-    //     document.getElementById("lbltext1").innerHTML="<br><br><br><br><br><br><br>invalid password";
-    //     document.getElementById("lbltext1").style.visibility="visible";
-    //     document.getElementById("lbltext1").style.color="red";
-    //     return false
-    // }
-    // else{
-    //     return true;
-    // }
-    if(text.value="admin@123.com"){
-        window.location.replace = ("admin.html");
-    }
-    else{
-        window.location.href = ("page1.html");
-    }
-}
+// Define the login credentials
+const loginData = {
+  email: document.getElementsByName('username')[0].value,
+  password: document.getElementsByName('password')[0].value
+};
 
+// Send a POST request with the login data
+fetch('/login', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(loginData)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // Process the response data
+  })
+  .catch(error => {
+    console.error(error); // Handle any errors
+  });
 
-</script>
-        </div>
-    </div>
-</div>
-</div>   
+      </script> -->
+      
 </body>
 </html>
